@@ -1,0 +1,44 @@
+public static void main(String[] args) {
+		String fileName = null;
+		Scanner br = new Scanner(System.in);
+		System.out.println("Enter the file name:");
+		fileName = br.next();
+		String path =  "FileInfo.java";
+		File fCreate = new File(path + "\\" + fileName);
+		try {
+			if(fCreate.createNewFile()) {
+				System.out.println("The file" + fCreate.getName() + "is successfully created");
+				FileWriter Writer = new FileWriter(fCreate);
+				Writer.write("Files in Java are seriously good!!");
+				Writer.close();
+				System.out.println("Successfully written");
+			
+			}else { 
+					System.out.println("The file" +fCreate.getName() + "already exists");
+				
+			}
+		}catch(IOException e) {
+					e.printStackTrace();
+		}
+		if(fCreate.exists()) {
+			System.out.println("Is the file readable : " +fCreate.canRead());
+			System.out.println("Is the file writable : " +fCreate.canWrite());
+			System.out.println("The path of the file : " +fCreate.getAbsolutePath());
+			System.out.println("The name of the file is : " +fCreate.getName());
+			System.out.println("The parent path of thhe file is : " +fCreate.getParent());
+			System.out.println("The path of the file is : " +fCreate.getPath());
+			System.out.println("Is it a directory : " +fCreate.isDirectory());
+			System.out.println("Is it a file :" +fCreate.isFile());
+			System.out.println("Is the file hidden : " +fCreate.isHidden());
+			System.out.println("The file was last modified : " +fCreate.lastModified());
+			System.out.println("The length of the file : " +fCreate.length());
+			fCreate.delete();
+			System.out.println("The file" +fCreate.getName()+ "is successfully deleted");
+			
+			
+			
+		}
+
+	}
+
+}
