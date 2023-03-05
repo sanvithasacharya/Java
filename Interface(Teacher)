@@ -1,0 +1,30 @@
+package InterfaceDemo;
+
+public class Teacher {
+	String name;
+	String staffID;
+	String designation;
+	String qualification;
+	long phoneNo;
+	double experience;
+	Teacher(String n,String sID,String d,long p,String Q,double e) {
+		this.name = n;
+		this.staffID = sID;
+		this.designation = d;
+		this.phoneNo = p;
+		this.qualification = Q;
+		this.experience = e;
+	}
+
+		// TODO Auto-generated method stub
+		public void biodata() {
+System.out.println("The Name of the staff is: " + this.name);
+System.out.println("The ID of the Staff is : " + this.staffID);
+System.out.println("The Designation of the staff is : "+ this.designation);
+System.out.println("The Phone Number of the staff is: " + this.phoneNo);
+System.out.println("The Qualification of the staff is : " + this.qualification);
+System.out.println("The Experience of the staff is: " + this.experience);
+}
+}
+
+
