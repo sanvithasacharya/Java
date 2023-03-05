@@ -1,0 +1,16 @@
+package InterfaceDemo;
+
+public class MainResume {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Teacher t1 = new Teacher("xyz","abc","ghi",123456,"mtech",2.3);
+		t1.biodata();
+		System.out.println("<------------------>");
+		Student s1 = new Student("wxy","hd625ghd","CSE",456987,74.2);
+		s1.biodata();
+		
+
+	}
+
+}
