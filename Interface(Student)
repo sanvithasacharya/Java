@@ -1,0 +1,27 @@
+package InterfaceDemo;
+
+public class Student {
+	String name;
+	String usn;
+	String discipline;
+	double result;
+	long phoneNo;
+	Student(String name,String usn,String discipline,long phoneNo,double result) {
+		this.name = name;
+		this.usn = usn;
+		this.discipline = discipline;
+		this.phoneNo = phoneNo;
+		this.result = result;
+		
+	}
+	public void biodata( ) {
+		// TODO Auto-generated method stub
+		System.out.println("The Name of the student is " + this.name);
+		System.out.println("The USN of the student is :" + this.usn);
+		System.out.println("The phone number of the student is " + this.phoneNo);
+		System.out.println("The Discipline of the student is: " + this.discipline);
+		System.out.println("The result of the student is: " + this.result);
+
+	}
+
+}
