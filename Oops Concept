@@ -1,0 +1,108 @@
+class Staff {
+	String StaffID;
+	String name;
+	long phoneNo;
+	double salary;
+	void readStaffDetails() {
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Enter the staff ID: ");
+		StaffID = userInput.next();
+		System.out.println("Enter the staff name: ");
+		name = userInput.next();
+		System.out.println("Enter the phone number: ");
+		phoneNo = userInput.nextLong();
+		System.out.println("Enter the salary: ");
+		salary = userInput.nextDouble();
+		
+	}
+	void displayStaffDetails() {
+		System.out.println("The staff ID is: " + StaffID);
+		System.out.println("The name of the staff is: " + name);
+		System.out.println("The phone number is: " + phoneNo);
+		System.out.println("The salary of the staff is: " + salary);
+	}
+	
+}
+class Teaching extends Staff {
+	String domain;
+	int noOfPublications;
+	void readStaffDetails() {
+		System.out.println("<---------Teaching Staff Details-------->");
+		super.readStaffDetails();
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Enter the domain: ");
+		domain = userInput.next();
+		System.out.println("Enter the number of publications: ");
+		noOfPublications = userInput.nextInt();
+	}
+	
+				void displayStaffDetails() {
+					System.out.println("<--------Teaching Staff Details-------->");
+					super.displayStaffDetails();
+					System.out.println("The domain is: " + domain);
+					System.out.println("The number of publications is: " +noOfPublications);
+				}
+}
+class Technical extends Staff {
+	String skills[] = new String[5];
+	int noOfSkills;
+	void readStaffDetails() {
+		System.out.println("<--------Technical Staff Details-------->");
+		super.readStaffDetails();
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("The number of skills: ");
+		noOfSkills = userInput.nextInt();
+		System.out.println("Enter the skills: ");
+		for(int i = 0; i < noOfSkills; i++) {
+			skills[i] = userInput.next();
+		}
+				
+	}
+	void displayStaffDetails() {
+		System.out.println("<--------Technical Staff Details-------->");
+		super.displayStaffDetails();
+		System.out.println("The skills are: ");
+		for(int i = 0; i < noOfSkills;i++) {
+			System.out.println(skills[i]);
+			
+		}
+		
+	}
+}
+class Contract extends Staff {
+	int period;
+	void readStaffDetails() {
+		System.out.println("<--------Contract Staff Details-------->");
+		super.readStaffDetails();
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("The contract period: ");
+		period = userInput.nextInt();
+		
+	}
+	void displayStaffDetails() {
+		System.out.println("<---------Contract Staff Details-------->");
+		super.displayStaffDetails();
+		System.out.println("The contract period: " + period);
+	}
+}
+
+public class OopsConcept {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Teaching t1 = new Teaching();
+		t1.readStaffDetails();
+		
+		Technical t2 = new Technical();
+		t2.readStaffDetails();
+		
+		Contract t3 = new Contract();
+		t3.readStaffDetails();
+		
+		t1.displayStaffDetails();
+		t2.displayStaffDetails();
+		t3.displayStaffDetails();
+
+	}
+
+}
