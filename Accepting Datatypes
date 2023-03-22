@@ -1,0 +1,20 @@
+public class Datatypes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println("Enter an Integer: ");
+Scanner userInput = new Scanner (System.in);
+//Accepting Integer value
+int num = userInput.nextInt();
+System.out.println("The entered number is: " + num);
+//Accepting Float value
+System.out.println("Enter a float value: ");
+ float numFloat = userInput.nextFloat();
+ System.out.println("The entered float number is: " + num);
+ //Accepting String
+ System.out.println("Enter a String: ");
+ String str = userInput.next();
+ System.out.println("The entered string is " + str);
+	}
+
+}
