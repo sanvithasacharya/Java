@@ -1,0 +1,20 @@
+public class Adddition {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+System.out.println("------ADDIMG TWO NUMBERS--------");
+Scanner userInput = new Scanner(System.in);
+//Enter the first number
+System.out.println("Enter a number: ");
+int num1 = userInput.nextInt();
+//Enter second number
+System.out.println("Enter another number: ");
+int num2 = userInput.nextInt();
+//Sum of two numbers
+int result = num1 + num2;
+System.out.println("sum: " + result);
+
+
+	}
+
+}
